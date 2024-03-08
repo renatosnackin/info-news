@@ -13,7 +13,7 @@ main h1 {
   font-size: 1.8rem;
   color: #ffffff;
   padding: 5px;
-  background-color: rgb(9, 197, 175);
+  background-color: var(--blue-var);
 }
 
 .salesContainer {
@@ -24,7 +24,7 @@ main h1 {
   height: 300px;
   width: 100%;
 
-  border: 3px solid rgb(9, 197, 175);
+  border: 3px solid var(--blue-var);
 }
 
 .sales_body {
@@ -37,7 +37,8 @@ main h1 {
   gap: 1rem;
 }
 
-.salesLeft, .salesRight {
+.salesLeft,
+.salesRight {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,20 +50,54 @@ main h1 {
 
 .sales_row {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.sales_row_container {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.sales_row span { 
+.cash {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.arrowContainer {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.arrow {
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+}
+
+.arrowContainer span {
+  color: var(--blue-var);
+  margin-left: 5px;
+  font-size: 1rem !important;
+}
+
+.sales_row span {
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.sales_row span:first-child { 
+.sales_row span:first-child {
   font-size: 1.8rem;
 }
 
 .category {
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
 }

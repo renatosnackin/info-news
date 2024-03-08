@@ -9,3 +9,7 @@ body {
   background-color: #f5f5f5;
   color: #000000;
 }
+
+:root {
+  --blue-var: rgb(9, 197, 175);
+}
