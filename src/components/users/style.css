@@ -1,0 +1,39 @@
+.backgroundUsers {
+    background-color: #FFA500;
+}
+
+.salesContainerUsers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 200px;
+    width: 100%;
+    border: 3px solid #FFA500;
+}
+h1.backgroundUsers{
+    color: black;
+}
+
+.usersRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    align-items: center;
+}
+
+.usersRow span {
+    font-size: 30px; 
+    color: #FFA500; 
+    font-weight: bold;
+}
+
+.usersBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+ 
+}

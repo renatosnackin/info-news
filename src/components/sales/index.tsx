@@ -1,4 +1,6 @@
 import './style.css'
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+
 
 const index = () => {
   return (
@@ -8,6 +10,8 @@ const index = () => {
         <div className="sales_body">
         <div className='salesLeft'>
           <div className="sales_row">
+          <RiMoneyDollarCircleLine />
+
             <span>R$48.417,42</span>
             <span>Faturamento</span>
           </div>
