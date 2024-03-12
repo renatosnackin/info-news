@@ -6,6 +6,7 @@
     height: 300px;
     width: 100%;
     border: 3px solid #20B2AA;
+    padding: 20px;
 
 }
 h1.backgroundProfile{
@@ -18,3 +19,8 @@ h1.backgroundProfile{
     align-items: center;
     justify-content: center;
 }
+
+.graphicsBar{
+    margin: 50px;
+}
+

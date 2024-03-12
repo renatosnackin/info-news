@@ -10,7 +10,7 @@ const Profile: React.FC = () => {
     const salesData = [10, 20, 30, 40, 50];
     const labels = ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'];
 
-    const pieChartData = [80,20];
+    const pieChartData = [80, 20];
     const pieChartLabels = ['Masculino', 'Feminino'];
 
     return (
@@ -18,8 +18,14 @@ const Profile: React.FC = () => {
             <h1 className="backgroundProfile">PERFIL DO CLIENTE</h1>
             <div className="salesContainerProfile">
                 <div className='graphics'>
-                    <BarChart data={salesData} labels={labels} />
-                    <PizzaChart data={pieChartData} labels={pieChartLabels} />
+                    <div className='graphicsBar'>
+                        <BarChart data={salesData} labels={labels} />
+
+                    </div>
+                    <div className='graphicsPizza'>
+                        <PizzaChart data={pieChartData} labels={pieChartLabels} />
+
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,0 +1,17 @@
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #00BFFF;
+}
+
+.linkPainel {
+  display: flex; 
+  align-items: center; 
+}
