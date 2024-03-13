@@ -6,7 +6,8 @@ import arrow from "../../assets/arrow.svg";
 const index = () => {
   return (
     <main>
-      <h1>VENDAS</h1>
+      <a href="https://snackin.tech/" target="_blank" rel="noopener noreferrer" className="LinkSales">Link para o painel de dados</a>
+      <h1 style={{ marginTop: '10px' }}>VENDAS</h1>
       <div className="salesContainer">
         <div className="sales_body">
           <div className="salesLeft">

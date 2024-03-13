@@ -100,3 +100,9 @@ main h1 {
 .category {
   font-size: 0.9rem !important;
 }
+
+.LinkSales {
+  color: #1E90FF	;
+  justify-content: space-between;
+  font-size: 20px;
+}
