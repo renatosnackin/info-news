@@ -31,42 +31,6 @@ main h1 {
   border: 3px solid #000000;
 }
 
-.sales_body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  gap: 1rem;
-}
 
-.salesLeft, .salesRight {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 70%;
-  gap: 1rem;
-}
 
-.sales_row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
 
-.sales_row span { 
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.sales_row span:first-child { 
-  font-size: 1.8rem;
-}
-
-.category {
-  font-size: .9rem !important;
-}
