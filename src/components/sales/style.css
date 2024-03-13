@@ -31,8 +31,9 @@ main h1 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
+  width: 98%;
   gap: 1rem;
+
 }
 
 .salesLeft,
@@ -42,7 +43,7 @@ main h1 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 80%;
+  width: 100%;
   gap: 1rem;
 }
 

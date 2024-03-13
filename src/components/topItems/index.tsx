@@ -10,10 +10,12 @@ const TopItems = () => {
     { name: 'Produto 2', quantity: 20, percentage: 30, value: 30.75 },
     { name: 'Produto 3', quantity: 15, percentage: 15, value: 20.25 },
     { name: 'Produto 4', quantity: 5, percentage: 10, value: 10.99 },
-    { name: 'Produto 1', quantity: 10, percentage: 20, value: 50.5 },
-    { name: 'Produto 2', quantity: 20, percentage: 30, value: 30.75 },
-    { name: 'Produto 3', quantity: 15, percentage: 15, value: 20.25 },
-    { name: 'Produto 4', quantity: 5, percentage: 10, value: 10.99 },
+    { name: 'Produto 5', quantity: 10, percentage: 20, value: 50.5 },
+    { name: 'Produto 6', quantity: 20, percentage: 30, value: 30.75 },
+    { name: 'Produto 7', quantity: 15, percentage: 15, value: 20.25 },
+    { name: 'Produto 8', quantity: 5, percentage: 10, value: 10.99 },
+    { name: 'Produto 9', quantity: 20, percentage: 30, value: 30.75 },
+    { name: 'Produto 10', quantity: 15, percentage: 15, value: 20.25 },
   ];
 
   const categories = [
@@ -21,6 +23,8 @@ const TopItems = () => {
     { name: 'Produto 2', quantity: 20, percentage: 30, value: 30.75 },
     { name: 'Produto 3', quantity: 15, percentage: 15, value: 20.25 },
     { name: 'Produto 4', quantity: 5, percentage: 10, value: 10.99 },
+    { name: 'Produto 5', quantity: 5, percentage: 10, value: 10.99 },
+
 
   ];
 
