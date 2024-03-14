@@ -2,6 +2,13 @@ import "./style.css";
 
 import cash from "../../assets/cash.svg";
 import arrow from "../../assets/arrow.svg";
+import box from "../../assets/box_circle.svg";
+import sarch from "../../assets/search.svg";
+import graph from "../../assets/graph_up.svg";
+import pix from "../../assets/pix.svg";
+
+
+
 
 const index = () => {
   return (
@@ -47,7 +54,7 @@ const index = () => {
           </div>
           <div className="salesLeft">
             <div className="sales_row">
-              <img src={cash} alt="cash image" className="cash" />
+              <img src={box} alt="cash image" className="cash" />
               <div className="sales_row_container">
                 <span>771</span>
                 <span>Skus únicos</span>
@@ -58,7 +65,7 @@ const index = () => {
               </div>
             </div>
             <div className="sales_row">
-              <img src={cash} alt="cash image" className="cash" />
+              <img src={sarch} alt="cash image" className="cash" />
               <div className="sales_row_container">
                 <span>52,30%</span>
                 <span className="category">das vendas em 5 categorias</span>
@@ -69,7 +76,7 @@ const index = () => {
               </div>
             </div>
             <div className="sales_row">
-              <img src={cash} alt="cash image" className="cash" />
+              <img src={graph} alt="cash image" className="cash" />
               <div className="sales_row_container">
                 <span>2037</span>
                 <span>Transações</span>
@@ -80,7 +87,7 @@ const index = () => {
               </div>
             </div>
             <div className="sales_row">
-              <img src={cash} alt="cash image" className="cash" />
+              <img src={pix} alt="cash image" className="cash" />
               <div className="sales_row_container">
                 <span>22,24%</span>
                 <span>Pgts no Pix</span>

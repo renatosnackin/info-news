@@ -8,7 +8,7 @@ import PizzaChart from './pizzaChart';
 const Profile: React.FC = () => {
     // Dados de exemplo para o gráfico em barra
     const salesData = [10, 20, 30, 40, 50];
-    const labels = ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'];
+    const labels = ['9', '18', '27', '37', '46'];
 
     const pieChartData = [80, 20];
     const pieChartLabels = ['Masculino', 'Feminino'];
