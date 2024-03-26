@@ -20,11 +20,13 @@ h1.backgroundUsers{
     flex-direction: column;
     justify-content: center;
     margin: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
     align-items: center;
 }
 
 .usersRow span {
-    font-size: 30px; 
+    font-size: 28px; 
     color: #FFA500; 
     font-weight: bold;
 }
