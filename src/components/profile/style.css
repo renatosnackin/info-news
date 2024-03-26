@@ -1,0 +1,27 @@
+.backgroundProfile {
+    background-color: #20B2AA;
+}
+
+.salesContainerProfile {
+    height: 300px;
+    width: 100%;
+    border: 3px solid #20B2AA;
+    padding: 20px;
+    
+
+}
+h1.backgroundProfile{
+    color: black;
+}
+
+.graphics{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphicsBar{
+    margin: 50px;
+}
+
