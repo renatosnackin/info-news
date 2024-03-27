@@ -28,10 +28,9 @@ const Profile: React.FC = () => {
     })
   );
 
-  // Dados de exemplo para o gráfico em barra
-  const labels =
-    barChartInfo?.map((item: { quantity: number }) => item?.quantity) || 0;
   const salesData =
+    barChartInfo?.map((item: { quantity: number }) => item?.quantity) || 0;
+  const labels =
     barChartInfo?.map((item: { name: number }) => item?.name?.toString()) || 0;
 
   const pieChartData =
