@@ -13,47 +13,45 @@ const BarChart: React.FC<BarChartProps> = ({ data, labels }) => {
     let chartInstance: Chart | null = null;
 
     if (chartRef && chartRef.current) {
-      const ctx = chartRef.current.getContext('2d');
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         chartInstance = new Chart(ctx, {
-          type: 'bar',
+          type: "bar",
           data: {
             labels: labels,
-            datasets: [{
-              label: 'Idade',
-              data: data,
-              backgroundColor: '#20B2AA',
-              borderColor: '#20B2AA',
-              borderWidth: 1
-            }]
+            datasets: [
+              {
+                label: "Idade",
+                data: data,
+                backgroundColor: "#20B2AA",
+                borderColor: "#20B2AA",
+                borderWidth: 1,
+              },
+            ],
           },
           options: {
             scales: {
-              
               y: {
                 beginAtZero: true,
-                
-              }
-            }
-          }
+                suggestedMin: 0,
+              },
+            },
+          },
         });
-        console.log('Gráfico criado com sucesso:', chartInstance);
-
       }
     }
 
     return () => {
       if (chartInstance) {
         chartInstance.destroy();
-        console.log('Gráfico destruído.');
-
+        console.log("Gráfico destruído.");
       }
     };
   }, [data, labels]);
 
   return (
-    <div className='barra'>
-      <canvas ref={chartRef}></canvas>
+    <div className="barra">
+      <canvas ref={chartRef} width={600} height={250}></canvas>
     </div>
   );
 };
