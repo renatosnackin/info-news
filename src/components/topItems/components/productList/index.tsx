@@ -1,16 +1,6 @@
 import React from 'react';
 import './style.css';
-
-interface Product {
-  name: string;
-  quantity: number;
-  percentage: number;
-  value: number;
-}
-
-interface ProductListProps {
-  products: Product[];
-}
+import { ProductListProps } from "../../../../types/types";
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
@@ -29,8 +19,8 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             <tr key={index}>
               <td>{product.name}</td>
               <td>{product.quantity}</td>
-              <td>{product.percentage}%</td>
-              <td>R${product.value.toFixed(2)}</td>
+              <td>{product && product.percentage}%</td>
+              <td>R${product && product.value.toFixed(2)}</td>
             </tr>
           ))}
         </tbody>

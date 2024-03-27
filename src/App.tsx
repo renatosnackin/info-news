@@ -4,16 +4,19 @@ import TopItems from './components/topItems';
 import Users from './components/users';
 import Profile from './components/profile';
 import Footer from './components/footer';
+import { EndpointProvider } from './context';
 
 function App() {
   return (
     <>
-      <Header />
-      <Sales />
-      <TopItems />
-      <Users/>
-      <Profile/>
-      <Footer/>
+      <EndpointProvider>
+        <Header />
+        <Sales />
+        <TopItems />
+        <Users />
+        <Profile />
+        <Footer />
+      </EndpointProvider>
     </>
   );
 }

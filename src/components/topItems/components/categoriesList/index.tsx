@@ -1,16 +1,6 @@
 import React from 'react';
 import './style.css';
-
-interface Categories {
-    name: string;
-    quantity: number;
-    percentage: number;
-    value: number;
-}
-
-interface CategoriesListProps {
-    categories: Categories[];
-}
+import { CategoriesListProps } from "../../../../types/types";
 
 const CategoriesList: React.FC<CategoriesListProps> = ({ categories }) => {
     return (
