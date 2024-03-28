@@ -108,6 +108,8 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
         }
       );
 
+      // console.log("response", response.data);
+
       setEndpointData(response.data);
 
       addHeader(response.data);

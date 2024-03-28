@@ -17,13 +17,13 @@ const Profile: React.FC = () => {
     : null;
 
   const barChartInfo = usersGroupedByAge?.map((item: UsersGroupedByAge) => ({
-    name: item.name,
+    age: item.age,
     quantity: item.quantity,
   }));
 
   const pizzaChartInfo = usersGroupedByGender?.map(
     (item: UsersGroupedByGender) => ({
-      name: item.name,
+      gender: item.gender,
       quantity: item.quantity,
     })
   );
@@ -31,12 +31,12 @@ const Profile: React.FC = () => {
   const salesData =
     barChartInfo?.map((item: { quantity: number }) => item?.quantity) || 0;
   const labels =
-    barChartInfo?.map((item: { name: number }) => item?.name?.toString()) || 0;
+    barChartInfo?.map((item: { age: number }) => item?.age?.toString()) || 0;
 
   const pieChartData =
     pizzaChartInfo?.map((item: { quantity: number }) => item?.quantity) || 0;
   const pieChartLabels =
-    pizzaChartInfo?.map((item: { name: string }) => item?.name) || "";
+    pizzaChartInfo?.map((item: { gender: string }) => item?.gender) || "";
 
   return (
     <main>

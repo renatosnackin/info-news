@@ -47,7 +47,7 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
             },
           },
         });
-        console.log('Gráfico de pizza criado com sucesso:', chartInstance);
+
       }
     }
 

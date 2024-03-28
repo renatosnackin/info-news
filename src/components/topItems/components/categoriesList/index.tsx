@@ -22,7 +22,7 @@ const CategoriesList: React.FC<CategoriesListProps> = ({ categories }) => {
                             <td>{categories.name}</td>
                             <td>{categories.quantity}</td>
                             <td>{categories.percentage}%</td>
-                            <td>R${categories.value.toFixed(2)}</td>
+                            <td>R$ {categories.value.toFixed(2)}</td>
                         </tr>
                     ))}
                 </tbody>

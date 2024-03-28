@@ -8,6 +8,12 @@ interface Header {
 interface BestSelling {
   name: string;
   quantity: number;
+  salePrice: number | null;
+}
+
+interface BestSellingCategory extends BestSelling {
+  category: string;
+  sales: number | null;
 }
 
 interface StoreAccessData {
@@ -18,12 +24,12 @@ interface StoreAccessData {
 }
 
 interface UsersGroupedByAge {
-  name: number | null;
+  age: number | null;
   quantity: number;
 }
 
 interface UsersGroupedByGender {
-  name: string | null;
+  gender: string | null;
   quantity: number;
 }
 
@@ -100,6 +106,7 @@ export type {
   Header,
   InvoiceData,
   BestSelling,
+  BestSellingCategory,
   StoreAccessData,
   ConsumerProfile,
   UsersGroupedByAge,

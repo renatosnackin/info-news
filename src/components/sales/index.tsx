@@ -30,22 +30,26 @@ const Sales = () => {
             <div className="sales_row">
               <img src={cash} alt="cash image" className="cash" />
               <div className="sales_row_container">
-                <span>R${(invoiceData && invoiceData.invoicing) || 0}</span>
+                <span>R$ {(invoiceData && invoiceData.invoicing) || 0}</span>
                 <span>Faturamento</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
-                  <span>{(invoiceData && invoiceData.invoicingProfit) || 0}%</span>
+                  <span>
+                    {(invoiceData && invoiceData.invoicingProfit) || 0}%
+                  </span>
                 </div>
               </div>
             </div>
             <div className="sales_row">
               <img src={cash} alt="cash image" className="cash" />
               <div className="sales_row_container">
-                <span>R${(invoiceData && invoiceData.storeTicket) || 0}</span>
+                <span>R$ {(invoiceData && invoiceData.storeTicket) || 0}</span>
                 <span>Ticket Médio</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
-                  <span>{(invoiceData && invoiceData.storeTicketProfit) || 0}%</span>
+                  <span>
+                    {(invoiceData && invoiceData.storeTicketProfit) || 0}%
+                  </span>
                 </div>
               </div>
             </div>
@@ -91,7 +95,9 @@ const Sales = () => {
                 <span>Transações</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
-                  <span>{(invoiceData && invoiceData.transactionProfit) || 0}</span>
+                  <span>
+                    {(invoiceData && invoiceData.transactionProfit) || 0}
+                  </span>
                 </div>
               </div>
             </div>
@@ -102,7 +108,9 @@ const Sales = () => {
                 <span>Pgts no Pix</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
-                  <span>{(invoiceData && invoiceData.pixPaymentsProfit) || 0}</span>
+                  <span>
+                    {(invoiceData && invoiceData.pixPaymentsProfit) || 0}
+                  </span>
                 </div>
               </div>
             </div>

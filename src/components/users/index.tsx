@@ -20,7 +20,7 @@ const Users = () => {
             <span>Usuários Únicos</span>
           </div>
           <div className="usersRow ">
-            <span>=SEM VALOR</span>
+            <span>={users && users.storeUniqueAccessCount}</span>
             <span>CPFs Únicos</span>
           </div>
         </div>

@@ -44,7 +44,6 @@ const BarChart: React.FC<BarChartProps> = ({ data, labels }) => {
     return () => {
       if (chartInstance) {
         chartInstance.destroy();
-        console.log("Gráfico destruído.");
       }
     };
   }, [data, labels]);

@@ -3,7 +3,7 @@ import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import ProductList from './components/productList';
 import CategoriesList from './components/categoriesList';
 import { useEndpoint } from "../../context";
-import { BestSelling } from "../../types/types";
+import { BestSelling, BestSellingCategory } from "../../types/types";
 
 const TopItems = () => {
   const endpointData = useEndpoint();
@@ -17,14 +17,14 @@ const TopItems = () => {
     name: item.name,
     quantity: item.quantity,
     percentage: 0,
-    value: 0,
+    value: item.salePrice,
   }));
 
-  const categories = bestSellingCategories.map((item: BestSelling) => ({
-    name: item.name,
+  const categories = bestSellingCategories.map((item: BestSellingCategory) => ({
+    name: item.category,
     quantity: item.quantity,
     percentage: 0,
-    value: 0,
+    value: item.sales,
   }));
 
   return (
