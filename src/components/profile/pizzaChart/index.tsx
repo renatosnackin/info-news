@@ -16,46 +16,56 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
         chartInstance = new Chart(ctx, {
-          type: 'doughnut',
+          type: "doughnut",
           data: {
             labels: labels,
-            datasets: [{
-              label: 'Vendas',
-              data: data,
-              backgroundColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)',
-               
-              ],
-              borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)',
-                
-              ],
-              borderWidth: 1
-            }]
+            datasets: [
+              {
+                label: "Quantidade",
+                data: data,
+                backgroundColor: [
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 99, 132, 1)",
+                  "#b4b4b4",
+                ],
+                borderColor: [
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 99, 132, 1)",
+                  "#b4b4b4",
+                ],
+                borderWidth: 1,
+              },
+            ],
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
               legend: {
-                position: 'right'
+                position: "right",
+                labels: {
+                  font: {
+                    size: 13,
+                    family: "Arial",
+                    weight: "bold",
+                  },
+                },
               },
-              
-            }
-          }
+
+              tooltip: {
+                enabled: true,
+              },
+            },
+          },
         });
-        console.log('Gráfico de pizza criado com sucesso:', chartInstance);
+
       }
     }
 
     // Retornando uma função de limpeza para destruir o gráfico quando o componente for desmontado
     return () => {
       if (chartInstance) {
-        chartInstance.destroy();
-        console.log('Gráfico de pizza destruído.');
-      }
+        chartInstance.destroy();      }
     };
   }, [data, labels]);
 

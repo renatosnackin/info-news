@@ -1,16 +1,6 @@
 import React from 'react';
 import './style.css';
-
-interface Categories {
-    name: string;
-    quantity: number;
-    percentage: number;
-    value: number;
-}
-
-interface CategoriesListProps {
-    categories: Categories[];
-}
+import { CategoriesListProps } from "../../../../types/types";
 
 const CategoriesList: React.FC<CategoriesListProps> = ({ categories }) => {
     return (
@@ -32,7 +22,7 @@ const CategoriesList: React.FC<CategoriesListProps> = ({ categories }) => {
                             <td>{categories.name}</td>
                             <td>{categories.quantity}</td>
                             <td>{categories.percentage}%</td>
-                            <td>R${categories.value.toFixed(2)}</td>
+                            <td>R$ {categories.value.toFixed(2)}</td>
                         </tr>
                     ))}
                 </tbody>
