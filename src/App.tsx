@@ -4,12 +4,17 @@ import TopItems from './components/topItems';
 import Users from './components/users';
 import Profile from './components/profile';
 import Footer from './components/footer';
-import { EndpointProvider } from './context';
+import InputStore from "./components/inputStore";
+import { EndpointProvider } from "./context";
+
+import "./App.css";
 
 function App() {
   return (
     <>
       <EndpointProvider>
+        <InputStore />
+
         <Header />
         <Sales />
         <TopItems />

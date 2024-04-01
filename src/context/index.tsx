@@ -19,13 +19,12 @@ const EndpointContext = createContext<any>(null);
 
 const EndpointProvider = ({ children }: { children: ReactNode }) => {
   const [endpointData, setEndpointData] = useState<EndpointResponse | null>();
+  const [store, setStore] = useState<number | null>();
   const [header, setHeader] = useState<Header>();
   const [invoiceData, setInvoiceData] = useState<InvoiceData>();
-  const [bestSellingItems, setBestSellingItems] = useState<BestSelling[]>(
-    []
-  );
+  const [bestSellingItems, setBestSellingItems] = useState<BestSelling[]>([]);
   const [bestSellingCategories, setBestSellingCategories] = useState<
-  BestSelling[]
+    BestSelling[]
   >([]);
   const [users, setUsers] = useState<StoreAccessData>();
   const [consumerProfile, setConsumerProfile] = useState<ConsumerProfile>();
@@ -96,11 +95,9 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const fetchData = async () => {
-    const storeId = 18;
-
     try {
       const response = await axios.get(
-        `https://test.snackin.net:5123/v2/stores/${storeId}/infonews?period=02-2022`,
+        `https://test.snackin.net:5123/v2/stores/${store}/infonews?period=02-2022`,
         {
           headers: {
             Accept: "application/json;v=2",
@@ -124,8 +121,10 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (store) {
+      fetchData();
+    }
+  }, [store]);
 
   return (
     <EndpointContext.Provider
@@ -136,6 +135,8 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
         bestSellingCategories,
         users,
         consumerProfile,
+        store,
+        setStore,
       }}
     >
       {children}
