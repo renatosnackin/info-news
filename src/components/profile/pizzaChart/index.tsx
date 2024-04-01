@@ -43,6 +43,17 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
             plugins: {
               legend: {
                 position: "right",
+                labels: {
+                  font: {
+                    size: 13,
+                    family: "Arial",
+                    weight: "bold",
+                  },
+                },
+              },
+
+              tooltip: {
+                enabled: true,
               },
             },
           },

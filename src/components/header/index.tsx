@@ -1,9 +1,14 @@
+import { useEndpoint } from '../../context';
 import './style.css';
 
 const Header = () => {
   const data = new Date();
-  const mes = data.toLocaleDateString("pt-BR", { month: "long" });
-  const ano = data.getFullYear();
+  // const mes = data.toLocaleDateString("pt-BR", { month: "long" });
+  // const ano = data.getFullYear();
+
+  const endpointData = useEndpoint();
+
+  const header = endpointData ? endpointData.header : null;
 
   return (
     <div className="container">
@@ -14,9 +19,10 @@ const Header = () => {
       </div>
 
       <div className="headerRight">
-        <h1>{mes}/ {ano}</h1>
+        {/* <h1>{mes}/ {ano}</h1> */}
+        <h1>{header && header.period}</h1>
         <h3>
-          NIQUELANDIA - GO
+          {header && header.storeAddress}
         </h3>
       </div>
     </header>
