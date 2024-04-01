@@ -5,6 +5,7 @@ import Users from './components/users';
 import Profile from './components/profile';
 import Footer from './components/footer';
 import InputStore from "./components/inputStore";
+import Assessments from './components/assessments';
 import { EndpointProvider } from "./context";
 
 import "./App.css";
@@ -20,6 +21,7 @@ function App() {
         <TopItems />
         <Users />
         <Profile />
+        <Assessments/>
         <Footer />
       </EndpointProvider>
     </>
