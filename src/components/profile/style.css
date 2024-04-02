@@ -21,10 +21,19 @@ h1.backgroundProfile{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .graphicsBar{
     margin: 50px;
 }
 
+@media screen and (max-width: 1024px) {
+    .graphics {
+        width: 100%; 
+    }
+
+    .graphicsBar {
+        margin: 20px 0; 
+    }
+}

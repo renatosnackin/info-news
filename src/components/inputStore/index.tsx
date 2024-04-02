@@ -7,8 +7,7 @@ const InputStore = () => {
   const [isModalOpen, setIsModalOpen] = React.useState<boolean>(true);
   const { store } = useEndpoint();
 
-  const handleSubmit = (storeId: string) => {
-    console.log("Store ID:", storeId);
+  const handleSubmit = () => {
     setIsModalOpen(false);
   };
 

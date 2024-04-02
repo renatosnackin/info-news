@@ -11,6 +11,7 @@
     width: 100%;
     border: 3px solid #FFA500;
 }
+
 h1.backgroundUsers{
     color: black;
 }
@@ -37,5 +38,10 @@ h1.backgroundUsers{
     align-items: center;
     justify-content: center;
     padding: 60px;
- 
 }
+
+@media screen and (max-width: 1024px) {
+    .usersRow span {
+        font-size: 1.5rem;
+    }
+  }

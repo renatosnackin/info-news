@@ -84,7 +84,7 @@ main h1 {
 .arrowContainer span {
   color: var(--blue-var);
   margin-left: 5px;
-  font-size: 1rem !important;
+  font-size: 1rem;
 }
 
 .sales_row span {
@@ -104,4 +104,30 @@ main h1 {
   color: #1E90FF	;
   justify-content: space-between;
   font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .sales_row img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sales_row_container > span:first-child {
+    font-size: 1.3rem;
+  }
+
+  .sales_row span {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    margin-top: .2rem;
+    height: 20px !important;
+    width: 20px !important;
+  }
 }

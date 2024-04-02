@@ -20,6 +20,8 @@ const EndpointContext = createContext<any>(null);
 const EndpointProvider = ({ children }: { children: ReactNode }) => {
   const [endpointData, setEndpointData] = useState<EndpointResponse | null>();
   const [store, setStore] = useState<number | null>();
+  const [month, setMonth] = useState<number | null>();
+  const [year, setYear] = useState<number | null>();
   const [header, setHeader] = useState<Header>();
   const [invoiceData, setInvoiceData] = useState<InvoiceData>();
   const [bestSellingItems, setBestSellingItems] = useState<BestSelling[]>([]);
@@ -97,15 +99,13 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://test.snackin.net:5123/v2/stores/${store}/infonews?period=02-2022`,
+        `https://test.snackin.net:5123/v2/stores/${store}/infonews?period=${month}-${year}`,
         {
           headers: {
             Accept: "application/json;v=2",
           },
         }
       );
-
-      // console.log("response", response.data);
 
       setEndpointData(response.data);
 
@@ -137,6 +137,10 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
         consumerProfile,
         store,
         setStore,
+        month,
+        setMonth,
+        year,
+        setYear,
       }}
     >
       {children}

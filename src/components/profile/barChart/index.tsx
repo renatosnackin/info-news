@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
+import "./style.css"
+
 interface BarChartProps {
   data: number[];
   labels: string[];
@@ -50,7 +52,7 @@ const BarChart: React.FC<BarChartProps> = ({ data, labels }) => {
 
   return (
     <div className="barra">
-      <canvas ref={chartRef} width={600} height={250}></canvas>
+      <canvas ref={chartRef} className='canvaStyle'></canvas>
     </div>
   );
 };

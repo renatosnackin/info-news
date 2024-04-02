@@ -1,4 +1,11 @@
-.barra {
-    padding: 20px;
-    background-color: black;
+.canvaStyle {
+    width: 600px;
+    height: 250px;
+}
+
+@media screen and (max-width: 1024px) {
+    .canvaStyle {
+        width: 400px !important;
+        height: 200px !important;
+    }
 }

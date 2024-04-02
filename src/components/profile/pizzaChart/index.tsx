@@ -62,7 +62,6 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
       }
     }
 
-    // Retornando uma função de limpeza para destruir o gráfico quando o componente for desmontado
     return () => {
       if (chartInstance) {
         chartInstance.destroy();      }
