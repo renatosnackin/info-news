@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactWordcloud from 'react-wordcloud';
+import "./style.css";
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
@@ -40,18 +41,21 @@ const words = [
     text: 'Praticidade',
     value: 30,
   },
+  
 ];
 
 const options = {
-    fontSizes: [15, 60].slice(),
+    fontSizes: [30, 120].slice(),
     rotations: 0, 
-    scale: 'linear', // Escala de tamanho
-    spiral: 'archimedean', // Layout espiral
+    scale: 'linear', 
+    spiral: 'archimedean', 
+    minSize: 20,
+    width:'500px'
   };
 
 function WordCloudComponent() {
   return (
-    <div style={{ width: '500px', height: '300px' }}>
+    <div className='cloud'>
       <ReactWordcloud words={words} options={options as any}/>
     </div>
   );

@@ -21,7 +21,7 @@ function App() {
         <TopItems />
         <Users />
         <Profile />
-        <Assessments/>
+        {/* <Assessments/> */}
         <Footer />
       </EndpointProvider>
     </>

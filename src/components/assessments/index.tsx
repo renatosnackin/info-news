@@ -8,8 +8,8 @@ import WordCloudComponent from "./wordcloud";
 const Assessments = () => {
   const endpointData = useEndpoint();
 
-  const salesData = [10, 20, 30, 40, 50];
-  const labels = ['9', '18', '27', '37', '46'];
+  const salesData = [4.74, 4.79, 4.80, 4.82, 4.91];
+  const labels = ['Novembro', 'Dezembro', 'Janeiro', 'Fevereiro', 'Março'];
 
   const pieChartData = [80, 20];
   const pieChartLabels = ['Promotores', 'Neutros'];
@@ -18,16 +18,24 @@ const Assessments = () => {
     <main>
       <h1 className="backgroundAssessments">AVALIAÇÕES DO APP</h1>
       <div className="salesContainerAssessments">
-        <span className="span_left">Nota dada pelos clientes (máximo 5)</span>
-        <div className="graphics">
-          <div className="graphicsBar">
+        <div className="div_title ">
+          <span >Nota dada pelos clientes (máximo 5)</span>
+        </div>
+        <div className="graphics_app">
+          <div >
             <BarChart data={salesData} labels={labels} />
           </div>
-          <div className="graphicsPizza">
+          <div className="average">
+            <span className="average_number">4,91</span>
+            <span className="average_note">Nota Média</span>
+          </div>
+          <div >
             <PizzaChart data={pieChartData} labels={pieChartLabels} />
           </div>
         </div>
-        <span className="span_left">Nuvem de Palavras - Palavras mais usadas pelos clientes</span>
+        <div className="div_title ">
+          <span className="span_left">Nuvem de Palavras - Palavras mais usadas pelos clientes</span>
+        </div>
         <div className="cloud">
           <WordCloudComponent />
         </div>

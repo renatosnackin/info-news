@@ -23,8 +23,8 @@ const BarChart: React.FC<BarChartProps> = ({ data, labels }) => {
               {
                 label: "Evolução das Notas",
                 data: data,
-                backgroundColor: "#20B2AA",
-                borderColor: "#20B2AA",
+                backgroundColor: "#836FFF",
+                borderColor: "#836FFF",
                 borderWidth: 1,
               },
             ],
@@ -47,9 +47,10 @@ const BarChart: React.FC<BarChartProps> = ({ data, labels }) => {
       }
     };
   }, [data, labels]);
+  
 
   return (
-    <div className="barra">
+    <div className="barra" style={{ width: '450px'}}>
       <canvas ref={chartRef} width={600} height={250}></canvas>
     </div>
   );

@@ -25,12 +25,12 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
                 data: data,
                 backgroundColor: [
                   "rgba(54, 162, 235, 1)",
-                  "rgba(255, 99, 132, 1)",
+                  "#030303",
                   "#b4b4b4",
                 ],
                 borderColor: [
                   "rgba(54, 162, 235, 1)",
-                  "rgba(255, 99, 132, 1)",
+                  "#070707",
                   "#b4b4b4",
                 ],
                 borderWidth: 1,
@@ -70,7 +70,7 @@ const PizzaChart: React.FC<PizzaChartProps> = ({ data, labels }) => {
   }, [data, labels]);
 
   return (
-    <div className='pizza'>
+    <div className='pizza' style={{ width: '258px' }}>
       <canvas ref={chartRef}></canvas>
     </div>
   );
