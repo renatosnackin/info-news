@@ -1,0 +1,48 @@
+.backgroundAssessments {
+    background-color: #1E90FF;
+}
+
+.salesContainerAssessments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 700px;
+    width: 100%;
+    border: 3px solid #1E90FF;
+}
+
+
+.div_title span {
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.div_title {
+    margin: 10px;
+}
+
+.average {
+    text-align: center;
+    margin: 10px;
+}
+
+.average span {
+    display: block;
+    margin-bottom: 5px;
+   
+
+}
+
+
+.average .average_number {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.graphics_app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
