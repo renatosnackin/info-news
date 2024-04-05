@@ -1,5 +1,4 @@
 import './style.css';
-import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import ProductList from './components/productList';
 import CategoriesList from './components/categoriesList';
 import { useEndpoint } from "../../context";
@@ -18,6 +17,7 @@ const TopItems = () => {
     quantity: item.quantity,
     percentage: 0,
     value: item.salePrice,
+    salePercentual: item.salePercentual
   }));
 
   const categories = bestSellingCategories.map((item: BestSellingCategory) => ({
@@ -25,6 +25,8 @@ const TopItems = () => {
     quantity: item.quantity,
     percentage: 0,
     value: item.sales,
+    salePercentual: item.salePercentual,
+    rankingPositionVariation: item.rankingPositionVariation
   }));
 
   return (
