@@ -63,6 +63,7 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
       pixPayments,
       pixPaymentsProfit,
       bestSellingCategoriesSalesPercentual,
+      bestSellingCategoriesSalesPercentualProfit
     } = endpointData;
 
     const invoiceData: InvoiceData = {
@@ -79,6 +80,7 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
       pixPayments,
       pixPaymentsProfit,
       bestSellingCategoriesSalesPercentual,
+      bestSellingCategoriesSalesPercentualProfit
     };
 
     setInvoiceData(invoiceData);
@@ -103,10 +105,6 @@ const EndpointProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const fetchData = async () => {
-    // const storeId = 18;
-    const monthVal = 0o2;
-    const yearVal = 2022;
-
     try {
       const response = await axios.get(
         `https://test.snackin.net:5123/v2/stores/${store}/infonews?period=${month}-${year}`,

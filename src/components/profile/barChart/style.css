@@ -9,3 +9,10 @@
         height: 200px !important;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .canvaStyle {
+        width: 300px !important;
+        height: 150px !important;
+    }
+  }

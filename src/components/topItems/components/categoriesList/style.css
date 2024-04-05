@@ -24,3 +24,15 @@
     gap: .5rem;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    tbody td, thead th {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    tbody td, thead th {
+      font-size: .7rem !important;
+    }
+}

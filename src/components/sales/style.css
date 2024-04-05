@@ -33,7 +33,6 @@ main h1 {
   height: 100%;
   width: 98%;
   gap: 1rem;
-
 }
 
 .salesLeft,
@@ -106,6 +105,10 @@ main h1 {
   font-size: 20px;
 }
 
+.title {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 1024px) {
 
   h1 {
@@ -129,5 +132,58 @@ main h1 {
     margin-top: .2rem;
     height: 20px !important;
     width: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sales_body {
+    flex-direction: row;
+  }
+
+  .salesLeft, .salesRight {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .salesContainer {
+    height: 450px;
+  }
+
+  .sales_body {
+    padding: 20px;
+    margin-left: 50px;
+  }
+
+  .title {
+    font-size: .9rem !important;
+  }
+
+  .LinkSales {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 0 20px !important;
+  }
+
+  .sales_body {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .sales_row img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sales_row_container > span:first-child {
+    font-size: 1rem;
+  }
+
+  .sales_row_container span {
+    font-size: .7rem;
   }
 }

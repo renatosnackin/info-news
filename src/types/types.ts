@@ -54,6 +54,7 @@ interface InvoiceData {
   pixPayments: number;
   pixPaymentsProfit: number;
   bestSellingCategoriesSalesPercentual: number;
+  bestSellingCategoriesSalesPercentualProfit: number;
 }
 
 interface EndpointResponse {

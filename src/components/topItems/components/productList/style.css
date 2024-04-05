@@ -1,4 +1,4 @@
-.product-list-container {
+  .product-list-container {
     margin-top: 20px;
     width: 100%;
   }
@@ -27,3 +27,14 @@
     background-color: #dddddd;
   }
   
+  @media screen and (max-width: 768px) {
+    tbody td, thead th {
+        font-size: .8rem;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    tbody td, thead th {
+      font-size: .7rem !important;
+    }
+  }

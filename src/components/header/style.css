@@ -54,3 +54,19 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 480px) {
+  .headerContainer {
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+  }
+
+  .headerLeft, .headerRight {
+    justify-content: center;
+    align-items: center;
+  }
+}

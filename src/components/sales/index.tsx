@@ -23,7 +23,7 @@ const Sales = () => {
       >
         Link para o painel de dados
       </a>
-      <h1 style={{ marginTop: "10px" }}>VENDAS</h1>
+      <h1 className="title">VENDAS</h1>
       <div className="salesContainer">
         <div className="sales_body">
           <div className="salesLeft">
@@ -81,10 +81,10 @@ const Sales = () => {
               <img src={sarch} alt="cash image" className="cash" />
               <div className="sales_row_container">
                 <span>{(invoiceData && (invoiceData.bestSellingCategoriesSalesPercentual).toFixed(2)) || 0}%</span>
-                <span className="category">das vendas em 5 categorias</span>
+                <span>das vendas em 5 categorias</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
-                  <span>SEM VALOR%</span>
+                  <span>{(invoiceData && (invoiceData.bestSellingCategoriesSalesPercentualProfit).toFixed(2)) || 0}%</span>
                 </div>
               </div>
             </div>
