@@ -9,11 +9,13 @@ interface BestSelling {
   name: string;
   quantity: number;
   salePrice: number | null;
+  salePercentual: number | null;
 }
 
 interface BestSellingCategory extends BestSelling {
   category: string;
   sales: number | null;
+  rankingPositionVariation: number | null;
 }
 
 interface StoreAccessData {
@@ -51,6 +53,7 @@ interface InvoiceData {
   transactionProfit: number;
   pixPayments: number;
   pixPaymentsProfit: number;
+  bestSellingCategoriesSalesPercentual: number;
 }
 
 interface EndpointResponse {
@@ -82,7 +85,7 @@ interface EndpointResponse {
 interface Product {
   name: string;
   quantity: number;
-  percentage: number | null;
+  salePercentual: number | null;
   value: number | 0;
 }
 
@@ -93,8 +96,9 @@ interface ProductListProps {
 interface Categories {
   name: string;
   quantity: number;
-  percentage: number;
   value: number;
+  salePercentual: number | null;
+  rankingPositionVariation: number | 0;
 }
 
 interface CategoriesListProps {

@@ -80,7 +80,7 @@ const Sales = () => {
             <div className="sales_row">
               <img src={sarch} alt="cash image" className="cash" />
               <div className="sales_row_container">
-                <span>SEM VALOR%</span>
+                <span>{(invoiceData && (invoiceData.bestSellingCategoriesSalesPercentual).toFixed(2)) || 0}%</span>
                 <span className="category">das vendas em 5 categorias</span>
                 <div className="arrowContainer">
                   <img src={arrow} alt="" className="arrow" />
