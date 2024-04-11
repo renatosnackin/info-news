@@ -44,7 +44,7 @@
 
 .headerRight h1 {
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -53,4 +53,20 @@
   color: rgb(255, 68, 0);
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 480px) {
+  .headerContainer {
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+  }
+
+  .headerLeft, .headerRight {
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -5,8 +5,6 @@ main {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  padding: 0 60px;
-  margin-top: 60px;
 }
 
 main h1 {
@@ -33,36 +31,159 @@ main h1 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
+  width: 98%;
   gap: 1rem;
 }
 
-.salesLeft, .salesRight {
+.salesLeft,
+.salesRight {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  width: 70%;
+  width: 100%;
   gap: 1rem;
 }
 
 .sales_row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.sales_row_container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.sales_row span { 
+.cash {
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.arrowContainer {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.arrow {
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+}
+
+.arrowContainer span {
+  color: var(--blue-var);
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+.sales_row span {
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.sales_row span:first-child { 
+.sales_row span:first-child {
   font-size: 1.8rem;
 }
 
 .category {
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
+}
+
+.LinkSales {
+  color: #1E90FF	;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .sales_row img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sales_row_container > span:first-child {
+    font-size: 1.3rem;
+  }
+
+  .sales_row span {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    margin-top: .2rem;
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sales_body {
+    flex-direction: row;
+  }
+
+  .salesLeft, .salesRight {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .salesContainer {
+    height: 450px;
+  }
+
+  .sales_body {
+    padding: 20px;
+    margin-left: 50px;
+  }
+
+  .title {
+    font-size: .9rem !important;
+  }
+
+  .LinkSales {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main {
+    padding: 0 20px !important;
+  }
+
+  .sales_body {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .sales_row img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sales_row_container > span:first-child {
+    font-size: 1rem;
+  }
+
+  .sales_row_container span {
+    font-size: .7rem;
+  }
 }
