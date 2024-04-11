@@ -25,12 +25,19 @@ main h1 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 650px;
+  height: fit-content;
   width: 100%;
 
   border: 3px solid #000000;
 }
 
+@media screen and (max-width: 768px) {
+  .salesContainerItems {
+    height: fit-content;
+  }
 
-
-
+  .backgroundItems {
+    font-size: .8rem !important;
+    width: 90% !important;
+  }
+}

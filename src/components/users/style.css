@@ -7,10 +7,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 200px;
+    height: fit-content;
     width: 100%;
     border: 3px solid #FFA500;
 }
+
 h1.backgroundUsers{
     color: black;
 }
@@ -19,9 +20,6 @@ h1.backgroundUsers{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15px;
-    margin-right: 100px;
-    margin-left: 100px;
     align-items: center;
 }
 
@@ -29,13 +27,66 @@ h1.backgroundUsers{
     font-size: 28px; 
     color: #FFA500; 
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .usersBody {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    gap: 10rem;
+    align-items: flex-start;
     justify-content: center;
     padding: 60px;
- 
 }
+
+@media screen and (max-width: 1024px) {
+    .usersRow span {
+        font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .salesContainerUsers {
+        width: 100%;
+    }
+
+    .usersBody {
+        width: 100%;
+        gap: 5rem;
+    }
+    
+    .usersRow {
+        margin: 0px;
+    }
+
+    .usersRow span {
+        font-size: 1.3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backgroundUsers {
+        font-size: .9rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .salesContainerUsers {
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backgroundUsers {
+        font-size: .9rem !important;
+    }
+
+    .usersBody {
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }

@@ -38,12 +38,8 @@ form {
   flex-direction: column;
 }
 
-input[type="number"] {
+.storeInput {
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: #0000008d;
 }
 
 button {
@@ -53,4 +49,21 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+input, select {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #0000008d;
+  margin-bottom: 10px;
+}
+
+.dateInput {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: .5rem;
 }
