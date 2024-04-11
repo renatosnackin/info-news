@@ -106,6 +106,11 @@ interface CategoriesListProps {
   categories: Categories[];
 }
 
+interface FloatingButtonProps {
+  handleGeneratePDF: () => void
+}
+
+
 export type {
   EndpointResponse,
   Header,
@@ -117,5 +122,6 @@ export type {
   UsersGroupedByAge,
   UsersGroupedByGender,
   ProductListProps,
-  CategoriesListProps
+  CategoriesListProps,
+  FloatingButtonProps
 };
